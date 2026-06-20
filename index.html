@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track tickets, tolls, registration notices, and vehicle compliance issues with Platora.">
+  <title>Platora — Vehicle compliance, handled</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=17">
+</head>
+<body>
+  <div class="site-shell dark-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Platora home">
+        <span class="brand-mark" data-icon="platora"></span><span>Platora</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="#how-it-works">Sync</a>
+        <a href="support.html">Support</a>
+        <div class="dropdown">
+          <button class="nav-dropdown" aria-expanded="false">Resources <span data-icon="chevron-down"></span></button>
+          <div class="dropdown-menu">
+            <a href="partners.html"><span data-icon="users"></span><span><strong>Partners</strong><small>Earn recurring revenue</small></span></a>
+            <a href="support.html"><span data-icon="help"></span><span><strong>Help</strong><small>Answers and support</small></span></a>
+            <a href="about.html"><span data-icon="info"></span><span><strong>About</strong><small>Why we built Platora</small></span></a>
+          </div>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-primary button-small" href="login.html">Get Started</a>
+        <button class="icon-button" aria-label="Notifications"><span data-icon="bell"></span></button>
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false"><span data-icon="menu"></span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero page-width">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> Vehicle compliance, simplified</div>
+          <h1>Find tickets, tolls,<br>registrations and<br>vehicle issues <span>instantly.</span></h1>
+          <p>Platora connects vehicle records, violations and recovery tools into one powerful dashboard.</p>
+          <div class="hero-actions">
+            <form class="plate-search" data-plate-form>
+              <label class="sr-only" for="hero-plate">Enter your license plate</label>
+              <span data-icon="search"></span>
+              <input id="hero-plate" name="plate" maxlength="10" placeholder="Enter your license plate" autocomplete="off">
+              <button class="button button-primary" type="submit">Search Plate</button>
+            </form>
+            <a class="button button-outline mobile-dashboard-cta" href="dashboard.html">View Dashboard</a>
+          </div>
+          <div class="trust-row">
+            <span><i data-icon="lock"></i>No DMV login required</span>
+            <span><i data-icon="search"></i>Search any plate for free</span>
+            <span><i data-icon="shield-check"></i>Secure &amp; private</span>
+          </div>
+        </div>
+        <div class="browser-preview" aria-label="Platora dashboard preview">
+          <div class="browser-bar">
+            <div class="traffic-lights"><i></i><i></i><i></i></div>
+            <div class="address-bar"><span data-icon="lock"></span> app.platora.com/dashboard</div>
+            <span data-icon="more"></span>
+          </div>
+          <div class="app-frame">
+            <aside class="app-sidebar">
+              <div class="mini-brand"><span data-icon="platora"></span><b>Platora</b></div>
+              <a class="selected"><span data-icon="grid"></span> Dashboard</a>
+              <a><span data-icon="search"></span> Search</a>
+              <a><span data-icon="alert"></span> Violations</a>
+              <a><span data-icon="car"></span> Vehicles</a>
+              <a><span data-icon="file"></span> Proof</a>
+              <a><span data-icon="bell"></span> Alerts</a>
+              <a><span data-icon="card"></span> Payments</a>
+            </aside>
+            <div class="app-main">
+              <div class="app-topline"><h3>Dashboard</h3><small>Welcome back, Alex</small></div>
+              <div class="metric-grid">
+                <div><small>Total violations</small><b>3</b><a>View all</a></div>
+                <div><small>Amount due</small><b>$230.75</b><a>Pay now</a></div>
+                <div><small>Resolved</small><b>$232.80</b><a>View reports</a></div>
+                <div><small>Active vehicles</small><b>2</b><a>View vehicles</a></div>
+              </div>
+              <div class="preview-panels">
+                <div class="dark-panel violations-preview">
+                  <h4>Recent violations</h4>
+                  <div class="mini-violation"><i class="red" data-icon="gauge"></i><span><b>Speeding Violation</b><small>ABC1234 · California</small></span><strong>$150.00</strong><button>Pay</button></div>
+                  <div class="mini-violation"><i class="amber" data-icon="toll"></i><span><b>Toll — I-190 East</b><small>ABC1234 · California</small></span><strong>$4.25</strong><button>Pay</button></div>
+                  <div class="mini-violation"><i class="purple" data-icon="meter"></i><span><b>Meter Expired</b><small>XYZ9876 · New York</small></span><strong>$76.50</strong><button>Pay</button></div>
+                </div>
+                <div class="dark-panel what-preview">
+                  <h4>What we do</h4>
+                  <div><i data-icon="search"></i><span><b>Find</b><small>Scan official records</small></span></div>
+                  <div><i data-icon="shield-check"></i><span><b>Verify</b><small>Confirm every record</small></span></div>
+                  <div><i data-icon="card"></i><span><b>Resolve</b><small>Pay and keep proof</small></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="product-section">
+    <div class="product-grid page-width">
+      <div class="summary-column">
+        <article class="white-card summary-card">
+          <div class="card-heading"><span class="soft-icon blue" data-icon="chart"></span><div><h3>Your Summary</h3><small><i class="status-dot"></i> Last updated just now</small></div></div>
+          <dl>
+            <div><dt>Total Violations</dt><dd>3</dd></div>
+            <div><dt>Amount Due</dt><dd>$230.75</dd></div>
+            <div><dt>Amount Resolved</dt><dd>$232.80</dd></div>
+          </dl>
+          <button class="button button-primary full-width"><span data-icon="shield-check"></span> AutoPay with Platora</button>
+          <p class="secure-note"><span data-icon="lock"></span> Secure · Fast · Optional</p>
+        </article>
+        <article class="white-card tracker-card">
+          <span class="soft-icon blue large" data-icon="shield"></span>
+          <div><h3>Verified Plate Tracker</h3><p>Official-source monitoring keeps your vehicle records accurate.</p><small>Verified with permitted public and mailed notices.</small></div>
+        </article>
+      </div>
+
+      <article class="white-card violations-card">
+        <div class="section-card-title"><h2>Violations <span>3</span></h2><button>Sort: Newest <i data-icon="chevron-down"></i></button></div>
+        <div class="violation-row">
+          <span class="soft-icon red" data-icon="gauge"></span>
+          <div><h3>Speeding Violation</h3><p>ABC1234 <b>•</b> California</p><small>Received May 12, 2025</small></div>
+          <strong>$150.00</strong><button class="pay-button">Pay</button>
+        </div>
+        <div class="violation-row">
+          <span class="soft-icon amber" data-icon="toll"></span>
+          <div><h3>Toll — I-190 East</h3><p>ABC1234 <b>•</b> California</p><small>Received May 10, 2025</small></div>
+          <strong>$4.25</strong><button class="pay-button">Pay</button>
+        </div>
+        <div class="violation-row">
+          <span class="soft-icon purple" data-icon="meter"></span>
+          <div><h3>Meter Expired</h3><p>XYZ9876 <b>•</b> New York</p><small>Received May 8, 2025</small></div>
+          <strong>$76.50</strong><button class="pay-button">Pay</button>
+        </div>
+        <a class="view-link" href="dashboard.html">View dashboard <span data-icon="arrow-right"></span></a>
+      </article>
+
+      <div class="action-column">
+        <article class="white-card what-card">
+          <h3>What we do</h3>
+          <div><span class="soft-icon blue" data-icon="search"></span><p><b>Find</b><small>We scan permitted records and your compliance mailbox.</small></p></div>
+          <div><span class="soft-icon blue" data-icon="shield-check"></span><p><b>Verify</b><small>Every notice is reviewed before it reaches you.</small></p></div>
+          <div><span class="soft-icon blue" data-icon="card"></span><p><b>Resolve</b><small>Pay, dispute, or archive proof from one dashboard.</small></p></div>
+        </article>
+        <a class="white-card help-card" href="support.html"><span class="soft-icon" data-icon="headphones"></span><p><b>Need help?</b><small>Our support team is here when you need us.</small></p><span data-icon="chevron-right"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section" id="how-it-works">
+    <div class="page-width">
+      <div class="section-intro centered">
+        <span class="kicker">HOW PLATORA WORKS</span>
+        <h2>From plate to proof, all in one place.</h2>
+        <p>Start with a free check. Add monitoring only when you’re ready.</p>
+      </div>
+      <div class="steps-flow">
+        <article><span>01</span><i data-icon="car"></i><h3>Enter your plate</h3><p>Run a limited free check with no DMV login.</p></article>
+        <article><span>02</span><i data-icon="user-plus"></i><h3>Create an account</h3><p>Save your vehicle and activate monitoring.</p></article>
+        <article><span>03</span><i data-icon="bell"></i><h3>Receive alerts</h3><p>See new tickets, tolls, and registration notices.</p></article>
+        <article><span>04</span><i data-icon="check"></i><h3>Resolve &amp; keep proof</h3><p>Pay manually or set AutoPay rules and limits.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="built-section">
+    <div class="page-width split-section">
+      <div class="section-intro">
+        <span class="kicker">BUILT FOR THE ROAD</span>
+        <h2>One clear system for every kind of operator.</h2>
+        <p>Whether you manage one car or a working fleet, Platora keeps costly notices from slipping through the cracks.</p>
+        <a class="text-link" href="partners.html">Explore partner options <span data-icon="arrow-right"></span></a>
+      </div>
+      <div class="audience-grid">
+        <span><i data-icon="user"></i>Everyday drivers</span><span><i data-icon="key"></i>Turo hosts</span>
+        <span><i data-icon="briefcase"></i>Rental operators</span><span><i data-icon="route"></i>Rideshare drivers</span>
+        <span><i data-icon="car"></i>Chauffeur companies</span><span><i data-icon="tool"></i>Contractors</span>
+        <span><i data-icon="truck"></i>Fleets</span><span><i data-icon="store"></i>Dealerships &amp; shops</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="coverage-section">
+    <div class="page-width coverage-grid">
+      <div class="section-intro">
+        <span class="kicker light">COMPLETE COVERAGE</span>
+        <h2>Public lookups where available. A smart fallback everywhere else.</h2>
+        <p>Coverage varies by agency and state. Platora combines permitted lookup with a dedicated compliance mailbox so important notices still reach your dashboard.</p>
+      </div>
+      <div class="tier-stack">
+        <article><span class="tier-label">TIER 1</span><div><h3>Permitted public lookup</h3><p>We monitor available public records for tickets, tolls, and vehicle notices.</p></div><i data-icon="search"></i></article>
+        <article><span class="tier-label purple-label">TIER 2</span><div><h3>Compliance mailbox</h3><p>For restricted or incomplete states, mailed notices are scanned and organized securely.</p></div><i data-icon="mail"></i></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="autopay-section">
+    <div class="page-width autopay-grid">
+      <div class="autopay-visual">
+        <div class="rule-card">
+          <div class="rule-head"><span class="soft-icon blue" data-icon="shield-check"></span><div><b>AutoPay rules</b><small>ABC1234 · California</small></div><label class="toggle"><input type="checkbox" checked><span></span></label></div>
+          <div class="rule-line"><span>Per-item limit</span><b>$100.00</b></div>
+          <div class="rule-line"><span>Monthly limit</span><b>$300.00</b></div>
+          <div class="rule-success"><span data-icon="check"></span> Receipt and proof saved automatically</div>
+        </div>
+      </div>
+      <div class="section-intro">
+        <span class="kicker">OPTIONAL AUTOPAY</span>
+        <h2>Set the rules. Stay in control.</h2>
+        <p>Choose which items can be paid, set per-item and monthly limits, and require verification first. Every payment includes a receipt and permanent proof record.</p>
+        <ul class="check-list">
+          <li><span data-icon="check"></span> You choose the limits</li>
+          <li><span data-icon="check"></span> Notices are verified before payment</li>
+          <li><span data-icon="check"></span> Turn it off anytime</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-cta">
+    <div class="page-width partner-cta-inner">
+      <div><span class="kicker light">PLATORA PARTNERS</span><h2>Earn recurring revenue from every active plate you refer.</h2><p>Give your customers a smarter way to stay compliant—and earn 20% monthly while their plate stays active.</p></div>
+      <a class="button button-white" href="partners.html">Become a Partner <span data-icon="arrow-right"></span></a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="page-width footer-inner">
+      <a class="brand dark-brand" href="index.html"><span class="brand-mark" data-icon="platora"></span><span>Platora</span></a>
+      <p>Vehicle compliance, handled.</p>
+      <nav><a href="dashboard.html">Dashboard</a><a href="partners.html">Partners</a><a href="support.html">Support</a><a href="about.html">About</a></nav>
+      <small>© 2026 Platora, Inc. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="app.js?v=4"></script>
+</body>
+</html>
