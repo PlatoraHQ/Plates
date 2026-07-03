@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platora - Vehicle Compliance Dashboard</title>
+    <meta
+      name="description"
+      content="Platora helps drivers and fleets monitor tickets, tolls, registration notices, compliance mail, payments, receipts, and AutoPay from one dashboard."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23020408'/%3E%3Cpath d='M18 8h8M8 14h18M8 20h13' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M23 8h3' stroke='%23526bff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preload" href="./assets/orbital-hero.png" as="image" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Platora home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>PLATORA</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#how">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#partners">For Partners</a>
+        <div class="nav-menu">
+          <button class="nav-menu-button" type="button" data-menu-toggle>
+            Resources
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="nav-popover" data-menu>
+            <a href="#dashboard">Dashboard Preview</a>
+            <a href="#coverage">Tier 1 and Tier 2</a>
+            <a href="#autopay">AutoPay Rules</a>
+          </div>
+        </div>
+        <a href="#support">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="ghost-button" type="button" data-open-modal="login">Log in</button>
+        <button class="light-button" type="button" data-start-check>Get Started</button>
+      </div>
+
+      <button class="mobile-toggle" type="button" aria-label="Open menu" data-mobile-toggle>
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Mobile navigation" data-mobile-nav>
+      <a href="#how">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#partners">For Partners</a>
+      <a href="#support">Support</a>
+      <button type="button" data-open-modal="login">Log in</button>
+      <button type="button" data-start-check>Get Started</button>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Platora Plates</p>
+          <h1>One dashboard.<br />All your <span>vehicle issues.</span></h1>
+          <p class="hero-copy">
+            Track tickets, tolls, registration, and notices. Pay manually or set AutoPay.
+            Never miss a thing.
+          </p>
+
+          <form class="plate-search" data-plate-form>
+            <label class="plate-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9V5h4M20 9V5h-4M4 15v4h4M20 15v4h-4" />
+              </svg>
+              <input
+                name="plate"
+                autocomplete="off"
+                maxlength="10"
+                placeholder="License plate number"
+                aria-label="License plate number"
+                required
+              />
+            </label>
+            <label class="state-field">
+              <select name="state" aria-label="Select state" required>
+                <option value="">Select state</option>
+                <option value="CA">California</option>
+                <option value="NY">New York</option>
+                <option value="FL">Florida</option>
+                <option value="TX">Texas</option>
+                <option value="MD">Maryland</option>
+                <option value="NJ">New Jersey</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="IL">Illinois</option>
+              </select>
+            </label>
+            <button type="submit">Check Plate</button>
+          </form>
+          <p class="secure-note">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 10V8a5 5 0 0 1 10 0v2" />
+              <rect x="5" y="10" width="14" height="10" rx="2" />
+            </svg>
+            Limited free check. Create account to see results.
+          </p>
+        </div>
+      </section>
+
+      <section class="preview-band" id="how">
+        <div class="section-grid">
+          <div class="section-copy">
+            <p class="section-kicker">Stay Ahead</p>
+            <h2>Prevent small issues from becoming big problems.</h2>
+            <p>
+              A $200 ticket today can turn into $1,000+ in penalties, late fees, and
+              headaches. Platora keeps vehicle compliance visible before it gets expensive.
+            </p>
+            <div class="feature-row">
+              <article>
+                <span class="feature-icon list-icon"></span>
+                <h3>Find Issues</h3>
+                <p>Tickets, tolls, and notices.</p>
+              </article>
+              <article>
+                <span class="feature-icon monitor-icon"></span>
+                <h3>Track & Organize</h3>
+                <p>Everything in one clean dashboard.</p>
+              </article>
+              <article>
+                <span class="feature-icon card-icon"></span>
+                <h3>Pay or AutoPay</h3>
+                <p>Set rules and relax.</p>
+              </article>
+              <article>
+                <span class="feature-icon shield-icon"></span>
+                <h3>Get Proof</h3>
+                <p>Receipts and documents stored for you.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="dashboard-shell" id="dashboard" aria-label="Platora dashboard preview">
+            <aside class="dash-sidebar">
+              <div class="mini-brand">
+                <span class="brand-mark small" aria-hidden="true"><span></span><span></span><span></span></span>
+                PLATORA
+              </div>
+              <a class="active">Overview</a>
+              <a>Vehicles</a>
+              <a>Violations</a>
+              <a>Payments</a>
+              <a>Documents</a>
+              <a>Alerts</a>
+              <a>Settings</a>
+              <div class="dash-bottom">
+                <a>Help</a>
+                <a>Log out</a>
+              </div>
+            </aside>
+            <div class="dash-main">
+              <div class="metric-row">
+                <article>
+                  <span>Open Items</span>
+                  <strong>7</strong>
+                  <a>View all</a>
+                </article>
+                <article>
+                  <span>Amount Due</span>
+                  <strong>$1,287.50</strong>
+                  <a>View all</a>
+                </article>
+                <article>
+                  <span>Potential Savings</span>
+                  <strong>$643.00</strong>
+                  <a>View all</a>
+                </article>
+                <article>
+                  <span>AutoPay Status</span>
+                  <strong class="active-text">Active</strong>
+                  <a>Manage</a>
+                </article>
+              </div>
+              <div class="table-head">
+                <h3>Recent Activity</h3>
+                <button type="button" data-open-modal="signup">Add vehicle</button>
+              </div>
+              <div class="activity-table" role="table" aria-label="Recent vehicle activity">
+                <div class="table-row table-labels" role="row">
+                  <span>Type</span><span>Plate</span><span>State</span><span>Date</span><span>Amount</span><span>Status</span><span></span>
+                </div>
+                <div class="table-row" role="row">
+                  <span>Speeding Violation</span><span>ABC1234</span><span>CA</span><span>May 10, 2026</span><span>$150.00</span><span><b class="due">Due</b></span><button>Pay</button>
+                </div>
+                <div class="table-row" role="row">
+                  <span>Toll - I-90 East</span><span>ABC1234</span><span>NY</span><span>May 8, 2026</span><span>$4.25</span><span><b class="due">Due</b></span><button>Pay</button>
+                </div>
+                <div class="table-row" role="row">
+                  <span>Meter Expired</span><span>XYZ9876</span><span>NY</span><span>May 5, 2026</span><span>$76.50</span><span><b class="due">Due</b></span><button>Pay</button>
+                </div>
+                <div class="table-row" role="row">
+                  <span>Registration Notice</span><span>ABC1234</span><span>CA</span><span>Apr 30, 2026</span><span>-</span><span><b class="action">Action Needed</b></span><button>View</button>
+                </div>
+                <div class="table-row" role="row">
+                  <span>Suspension Warning</span><span>LMN4321</span><span>FL</span><span>Apr 28, 2026</span><span>-</span><span><b class="urgent">Urgent</b></span><button>View</button>
+                </div>
+              </div>
+              <a class="view-all" href="#support">View All Activity</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" id="coverage">
+        <div class="section-heading">
+          <p class="section-kicker">How It Works</p>
+          <h2>Platora chooses the right monitoring path for each plate.</h2>
+          <p>
+            Add a vehicle once. Platora checks permitted sources where available and routes
+            restricted states into an authorized compliance-mail workflow.
+          </p>
+        </div>
+        <div class="step-grid">
+          <article>
+            <span>01</span>
+            <h3>Add plate</h3>
+            <p>Create an account with email, phone, plate number, and state.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Determine coverage</h3>
+            <p>Tier 1 uses permitted lookup. Tier 2 uses authorized vehicle compliance mail.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Organize activity</h3>
+            <p>Tickets, tolls, notices, due dates, documents, and payment status land in one place.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Pay with proof</h3>
+            <p>Pay manually, enable AutoPay rules, and keep receipts in your dashboard.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pricing-section" id="pricing">
+        <div class="section-heading">
+          <p class="section-kicker">Pricing</p>
+          <h2>Built for one car or a full fleet.</h2>
+          <p>The tier is based on your own fleet size, not referral volume.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p>Individual & Small Operators</p>
+            <h3>1-10 vehicles</h3>
+            <div class="price">$49<span>/ plate / mo</span></div>
+            <ul>
+              <li>Limited free plate check</li>
+              <li>Ticket, toll, and notice dashboard</li>
+              <li>Manual pay links and receipt storage</li>
+              <li>Optional AutoPay rules</li>
+            </ul>
+            <button type="button" data-start-check>Start Free Check</button>
+          </article>
+          <article class="price-card featured">
+            <p>Medium Fleets</p>
+            <h3>11-50 vehicles</h3>
+            <div class="price">$25<span>/ plate / mo</span></div>
+            <ul>
+              <li>Multi-vehicle dashboard</li>
+              <li>Compliance notices and document history</li>
+              <li>Payment status and proof records</li>
+              <li>Team-ready fleet workflows</li>
+            </ul>
+            <button type="button" data-open-modal="signup">Build Fleet Account</button>
+          </article>
+          <article class="price-card">
+            <p>Large Fleets</p>
+            <h3>51+ vehicles</h3>
+            <div class="price">$12<span>/ plate / mo</span></div>
+            <ul>
+              <li>Scaled per-plate monitoring</li>
+              <li>Authorized representative consent</li>
+              <li>Priority support and onboarding</li>
+              <li>Partner and operations review</li>
+            </ul>
+            <button type="button" data-open-modal="support">Talk to Platora</button>
+          </article>
+        </div>
+        <p class="pricing-note">
+          AutoPay processing fees are separate from ticket, toll, registration, or compliance amounts.
+        </p>
+      </section>
+
+      <section class="autopay-section" id="autopay">
+        <div class="autopay-panel">
+          <div>
+            <p class="section-kicker">AutoPay</p>
+            <h2>User-controlled payment rules.</h2>
+            <p>
+              AutoPay is off by default. When enabled, Platora only pays verified items that
+              match the saved card, consent, limits, and rules selected by the account owner.
+            </p>
+          </div>
+          <div class="rule-list">
+            <span>Auto-pay tolls under $100</span>
+            <span>Require approval over $500</span>
+            <span>Never auto-pay disputed items</span>
+            <span>Review unfamiliar authorities</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner-section" id="partners">
+        <div class="section-heading">
+          <p class="section-kicker">For Partners</p>
+          <h2>Give customers a cleaner way to manage vehicle issues.</h2>
+          <p>
+            Dealerships, repair shops, rental hosts, and fleet operators can bring customers
+            into Platora without changing the customer’s ownership or payment control.
+          </p>
+        </div>
+        <div class="partner-grid">
+          <article><strong>Dealerships</strong><span>Post-sale compliance handoff</span></article>
+          <article><strong>Repair Shops</strong><span>Customer retention and reminders</span></article>
+          <article><strong>Rental Hosts</strong><span>Track tolls, notices, and proof</span></article>
+          <article><strong>Commercial Fleets</strong><span>Organize multi-vehicle operations</span></article>
+        </div>
+      </section>
+
+      <section class="support-section" id="support">
+        <div class="support-card">
+          <div>
+            <p class="section-kicker">Support</p>
+            <h2>Questions before you add a plate?</h2>
+            <p>
+              Platora support can help with coverage routing, Tier 2 mailbox setup, fleet
+              consent language, and payment-rule questions.
+            </p>
+          </div>
+          <form class="support-form" data-support-form>
+            <input name="name" placeholder="Name" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <select name="topic" required>
+              <option value="">Choose topic</option>
+              <option>Free plate check</option>
+              <option>Fleet onboarding</option>
+              <option>Tier 2 mailbox</option>
+              <option>AutoPay</option>
+            </select>
+            <button type="submit">Contact Support</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="#home" aria-label="Platora home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>PLATORA</span>
+      </a>
+      <p>© 2026 Platora, Inc. All rights reserved.</p>
+      <p>
+        Platora is not a government agency and is not affiliated with any DMV, toll authority,
+        court, city, state, or federal agency.
+      </p>
+      <nav aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#support">Contact</a>
+      </nav>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+    <dialog class="modal" data-modal="signup">
+      <form method="dialog" class="modal-card" data-signup-form>
+        <button class="modal-close" value="close" aria-label="Close">×</button>
+        <p class="section-kicker">Create Account</p>
+        <h2>Start with a limited free plate check.</h2>
+        <input name="email" type="email" placeholder="Email address" required />
+        <input name="phone" type="tel" placeholder="Phone number" required />
+        <input name="plate" placeholder="License plate number" maxlength="10" required />
+        <select name="state" required>
+          <option value="">State</option>
+          <option>California</option>
+          <option>New York</option>
+          <option>Florida</option>
+          <option>Texas</option>
+          <option>Maryland</option>
+          <option>New Jersey</option>
+        </select>
+        <label class="check-line">
+          <input type="checkbox" required />
+          <span>I authorize Platora to collect, organize, and manage vehicle compliance data connected to vehicles I add.</span>
+        </label>
+        <button type="submit">Create Free Account</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" data-modal="login">
+      <form method="dialog" class="modal-card" data-login-form>
+        <button class="modal-close" value="close" aria-label="Close">×</button>
+        <p class="section-kicker">Welcome Back</p>
+        <h2>Log in to Platora.</h2>
+        <input name="email" type="email" placeholder="Email address" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <button type="submit">Log in</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" data-modal="plate">
+      <form method="dialog" class="modal-card result-card" data-result-form>
+        <button class="modal-close" value="close" aria-label="Close">×</button>
+        <p class="section-kicker">Limited Free Check</p>
+        <h2 data-result-title>We found preliminary activity.</h2>
+        <div class="result-list">
+          <span><strong>2</strong> visible sample items</span>
+          <span><strong>Tier route</strong> determined after account creation</span>
+          <span><strong>AutoPay</strong> off by default</span>
+        </div>
+        <p>
+          Create a free account with email and phone to associate this plate and see the
+          limited results available for this vehicle.
+        </p>
+        <button type="submit">Continue to Account</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" data-modal="support">
+      <form method="dialog" class="modal-card" data-enterprise-form>
+        <button class="modal-close" value="close" aria-label="Close">×</button>
+        <p class="section-kicker">Fleet Contact</p>
+        <h2>Talk with Platora.</h2>
+        <input name="name" placeholder="Name" required />
+        <input name="email" type="email" placeholder="Work email" required />
+        <input name="vehicles" type="number" min="1" placeholder="Vehicle count" required />
+        <button type="submit">Request Follow-Up</button>
+      </form>
+    </dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
