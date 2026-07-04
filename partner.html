@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platora Partner Application</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./partner.css" />
+  </head>
+  <body class="partner-page">
+    <header class="site-header partner-topbar" data-header>
+      <a class="brand" href="./index.html" aria-label="Platora home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>PLATORA</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Partner navigation">
+        <a href="./index.html#how">How It Works</a>
+        <a href="./index.html#pricing">Pricing</a>
+        <a href="./partner.html">Become a Partner</a>
+        <a href="./partner-login.html">Partner Login</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="ghost-button" href="./partner-login.html">Partner Login</a>
+        <a class="light-button" href="#partner-application">Apply Now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="partner-hero">
+        <div class="partner-hero-inner">
+          <p class="eyebrow">Approved Partner Program</p>
+          <h1>Help customers stay ahead of vehicle issues.</h1>
+          <p>
+            Platora partners refer drivers, hosts, and operators into a clean vehicle
+            compliance dashboard while approved partners track activity, commissions, and
+            payout status in a private portal.
+          </p>
+          <div class="partner-actions">
+            <a class="partner-primary-link" href="#partner-application">Apply to Become a Partner</a>
+            <a class="partner-secondary-link" href="./partner-login.html">Approved Partner Login</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner-public-section">
+        <div class="section-heading">
+          <p class="section-kicker">Partner Types</p>
+          <h2>Built for automotive businesses and operators.</h2>
+          <p>
+            The private Partner Portal is available only after approval. Public visitors can
+            apply here and learn how referrals work without accessing partner tools.
+          </p>
+        </div>
+        <div class="partner-type-grid">
+          <article><strong>Dealership</strong><span>Post-sale compliance support for vehicle buyers.</span></article>
+          <article><strong>Repair Shop</strong><span>A simple referral path for returning customers.</span></article>
+          <article><strong>Mechanic</strong><span>Help drivers avoid missed notices and penalties.</span></article>
+          <article><strong>Rental Host</strong><span>Refer renters and operators who manage vehicle activity.</span></article>
+          <article><strong>Fleet Operator</strong><span>Support larger teams with organized plate monitoring.</span></article>
+          <article><strong>Auto Professional</strong><span>Create a trusted channel for compliance referrals.</span></article>
+        </div>
+      </section>
+
+      <section class="partner-application-section" id="partner-application">
+        <div class="partner-application-copy">
+          <p class="section-kicker">Application</p>
+          <h2>Apply for approved partner access.</h2>
+          <p>
+            Once reviewed and approved, your business receives partner login access,
+            referral tools, and a private dashboard for tracking customer activity and payouts.
+          </p>
+        </div>
+        <form class="partner-application-form" data-partner-application>
+          <input name="business" placeholder="Business name" required />
+          <input name="contact" placeholder="Contact name" required />
+          <input name="email" type="email" placeholder="Business email" required />
+          <input name="phone" type="tel" placeholder="Phone number" required />
+          <select name="type" required>
+            <option value="">Partner type</option>
+            <option>Dealership</option>
+            <option>Repair Shop</option>
+            <option>Mechanic</option>
+            <option>Rental Host</option>
+            <option>Fleet Operator</option>
+            <option>Auto Professional</option>
+          </select>
+          <input name="website" placeholder="Website or business profile" />
+          <textarea name="notes" placeholder="Tell us about your customer base"></textarea>
+          <button type="submit">Submit Partner Application</button>
+          <p class="partner-form-note">
+            Submitting an application does not expose private partner tools. Dashboard access is
+            provided only after approval.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="./index.html" aria-label="Platora home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>PLATORA</span>
+      </a>
+      <p>© 2026 Platora, Inc. All rights reserved.</p>
+      <p>
+        Platora is not a government agency and is not affiliated with any DMV, toll authority,
+        court, city, state, or federal agency.
+      </p>
+      <nav aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="./partner-login.html">Partner Login</a>
+      </nav>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <script src="./partner.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platora Partner Portal</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./partner.css" />
+  </head>
+  <body class="partner-dashboard-page">
+    <aside class="partner-portal-sidebar">
+      <a class="brand" href="./index.html" aria-label="Platora home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>PLATORA</span>
+      </a>
+      <nav aria-label="Partner portal navigation">
+        <a class="active" href="#overview">Overview</a>
+        <a href="#plates">Active Plates</a>
+        <a href="#staff-codes">Staff Codes</a>
+        <a href="#customers">Customer Activity</a>
+        <a href="#commissions">Commission History</a>
+        <a href="#payouts">Payout History</a>
+        <a href="#resources">Marketing Resources</a>
+        <a href="#profile">Profile & Business Information</a>
+        <a href="#settings">Settings</a>
+      </nav>
+      <a class="partner-portal-exit" href="./partner-login.html">Log out</a>
+    </aside>
+
+    <main class="partner-portal-main">
+      <header class="partner-portal-header">
+        <div>
+          <p class="section-kicker">Partner Portal</p>
+          <h1>Overview</h1>
+          <p>Demo data for approved Platora partners. Backend integration comes later.</p>
+        </div>
+        <a class="partner-secondary-link dark" href="./partner.html">Partner Program</a>
+      </header>
+
+      <section class="partner-stat-grid" id="overview" aria-label="Partner overview metrics">
+        <article id="plates"><span>Active Plates</span><strong>184</strong><p>Across referred subscribers</p></article>
+        <article><span>Monthly Earnings</span><strong>$4,860</strong><p>Estimated current month</p></article>
+        <article><span>Pending Earnings</span><strong>$1,240</strong><p>Awaiting payout clearance</p></article>
+        <article><span>Lifetime Earnings</span><strong>$38,920</strong><p>Total demo commissions</p></article>
+        <article><span>Next Payout Date</span><strong>Aug 1, 2026</strong><p>Monthly partner payout</p></article>
+      </section>
+
+      <section class="partner-tools-grid">
+        <article class="partner-tool-card">
+          <p class="section-kicker">Referral Link</p>
+          <h2>platora.com/r/atlas-auto</h2>
+          <button type="button" data-copy-value="platora.com/r/atlas-auto">Copy Link</button>
+        </article>
+        <article class="partner-tool-card qr-card">
+          <p class="section-kicker">QR Code</p>
+          <div class="demo-qr" aria-label="Demo partner referral QR code">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </article>
+        <article class="partner-tool-card">
+          <p class="section-kicker">Partner Sign-up Code</p>
+          <h2>ATLAS25</h2>
+          <button type="button" data-copy-value="ATLAS25">Copy Code</button>
+        </article>
+      </section>
+
+      <section class="partner-panel" id="staff-codes">
+        <div class="partner-panel-head">
+          <div>
+            <p class="section-kicker">Staff Codes</p>
+            <h2>Tracking codes under the main partner account.</h2>
+          </div>
+          <button class="partner-panel-button" type="button">Add Staff Code</button>
+        </div>
+        <div class="partner-code-summary">
+          <span><b>Main Partner Code</b> ATLAS25</span>
+          <span><b>Main Invisible Link</b> platora.com/r/atlas-auto</span>
+        </div>
+        <p class="partner-panel-note">
+          Platora pays only the main partner account. Staff codes track performance only;
+          the business handles any internal splits.
+        </p>
+        <div class="partner-data-table">
+          <div class="partner-data-row staff-code-row labels">
+            <span>Staff name</span><span>Staff code</span><span>Invisible link</span><span>Active plates</span><span>Monthly earnings generated</span><span>Lifetime earnings generated</span>
+          </div>
+          <div class="partner-data-row staff-code-row">
+            <span>Maya Chen</span><span>ATLAS-MAYA</span><span>platora.com/r/atlas-maya</span><span>42</span><span>$1,180</span><span>$8,640</span>
+          </div>
+          <div class="partner-data-row staff-code-row">
+            <span>Derrick Stone</span><span>ATLAS-DERRICK</span><span>platora.com/r/atlas-derrick</span><span>27</span><span>$760</span><span>$5,210</span>
+          </div>
+          <div class="partner-data-row staff-code-row">
+            <span>Nina Patel</span><span>ATLAS-NINA</span><span>platora.com/r/atlas-nina</span><span>19</span><span>$520</span><span>$3,980</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner-panel" id="customers">
+        <div class="partner-panel-head">
+          <div>
+            <p class="section-kicker">Customer Activity</p>
+            <h2>Recent Signups</h2>
+          </div>
+          <strong>Active Subscribers: 62</strong>
+        </div>
+        <div class="partner-data-table">
+          <div class="partner-data-row labels">
+            <span>Customer</span><span>Partner Type</span><span>Plates</span><span>Status</span><span>Date</span>
+          </div>
+          <div class="partner-data-row">
+            <span>Brightline Rentals</span><span>Rental Host</span><span>18</span><span><b class="active-text">Active</b></span><span>Jul 1, 2026</span>
+          </div>
+          <div class="partner-data-row">
+            <span>Mason Fleet Group</span><span>Fleet Operator</span><span>31</span><span><b class="active-text">Active</b></span><span>Jun 28, 2026</span>
+          </div>
+          <div class="partner-data-row">
+            <span>Harbor Auto</span><span>Dealership</span><span>7</span><span><b>Trial</b></span><span>Jun 24, 2026</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner-dashboard-columns">
+        <article class="partner-panel" id="commissions">
+          <div class="partner-panel-head">
+            <div>
+              <p class="section-kicker">Commission History</p>
+              <h2>Latest Commissions</h2>
+            </div>
+          </div>
+          <div class="partner-list">
+            <span><b>$420.00</b> Brightline Rentals renewal</span>
+            <span><b>$260.00</b> Mason Fleet Group activation</span>
+            <span><b>$89.00</b> Single-plate subscriber</span>
+          </div>
+        </article>
+
+        <article class="partner-panel" id="payouts">
+          <div class="partner-panel-head">
+            <div>
+              <p class="section-kicker">Payout History</p>
+              <h2>Recent Payouts</h2>
+            </div>
+          </div>
+          <div class="partner-list">
+            <span><b>$3,940.00</b> Paid Jul 1, 2026</span>
+            <span><b>$3,510.00</b> Paid Jun 1, 2026</span>
+            <span><b>$2,880.00</b> Paid May 1, 2026</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="partner-dashboard-columns">
+        <article class="partner-panel" id="resources">
+          <p class="section-kicker">Marketing Resources</p>
+          <h2>Approved Partner Assets</h2>
+          <div class="partner-resource-grid">
+            <span>Referral one-sheet</span>
+            <span>Counter card</span>
+            <span>Email copy</span>
+            <span>QR poster</span>
+          </div>
+        </article>
+
+        <article class="partner-panel" id="profile">
+          <p class="section-kicker">Profile & Business Information</p>
+          <h2>Atlas Auto Group</h2>
+          <div class="partner-profile-list">
+            <span><b>Partner Type</b> Dealership</span>
+            <span><b>Contact</b> Jordan Reyes</span>
+            <span><b>Email</b> partners@example.com</span>
+            <span><b>Region</b> California</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="partner-panel" id="settings">
+        <p class="section-kicker">Settings</p>
+        <h2>Portal Preferences</h2>
+        <div class="partner-settings-grid">
+          <label><input type="checkbox" checked /> Email monthly payout summaries</label>
+          <label><input type="checkbox" checked /> Notify on new active subscribers</label>
+          <label><input type="checkbox" /> Require approval for co-branded assets</label>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <script src="./partner.js"></script>
+  </body>
+</html>

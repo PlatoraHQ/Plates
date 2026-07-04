@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platora Partner Login</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./partner.css" />
+  </head>
+  <body class="partner-page">
+    <main class="partner-auth-shell">
+      <section class="partner-auth-brand">
+        <a class="brand" href="./index.html" aria-label="Platora home">
+          <span class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span>PLATORA</span>
+        </a>
+        <div>
+          <p class="eyebrow">Private Partner Portal</p>
+          <h1>Approved partners sign in here.</h1>
+          <p>
+            The Partner Portal is private. Dashboard access is only available after your
+            partner application has been reviewed and approved.
+          </p>
+        </div>
+      </section>
+
+      <section class="partner-auth-card">
+        <p class="section-kicker">Partner Login</p>
+        <h2>Access your dashboard.</h2>
+        <form data-partner-login>
+          <input name="email" type="email" placeholder="Partner email" required />
+          <input name="password" type="password" placeholder="Password" required />
+          <button type="submit">Sign In</button>
+        </form>
+        <p>
+          Not approved yet?
+          <a href="./partner.html">Apply to Become a Partner</a>
+        </p>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+    <script src="./partner.js"></script>
+  </body>
+</html>
