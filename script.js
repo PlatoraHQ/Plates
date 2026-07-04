@@ -103,6 +103,15 @@ document.querySelectorAll("[data-signup-form], [data-login-form], [data-support-
     dialog?.close();
 
     if (event.currentTarget.matches("[data-login-form]")) {
+      const formData = new FormData(event.currentTarget);
+      const email = String(formData.get("email") || "").trim().toLowerCase();
+      const password = String(formData.get("password") || "");
+
+      if (email === "demo@platora.net" && password === "Platora123") {
+        window.location.href = "./customer-dashboard.html";
+        return;
+      }
+
       showToast("Login flow connected for the frontend demo.");
       return;
     }

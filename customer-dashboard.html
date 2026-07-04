@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Platora Customer Dashboard</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./customer.css" />
+  </head>
+  <body class="customer-dashboard-page">
+    <aside class="customer-sidebar">
+      <a class="brand" href="./index.html" aria-label="Platora home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>PLATORA</span>
+      </a>
+      <nav aria-label="Customer dashboard navigation">
+        <button class="active" type="button" data-dashboard-tab="overview">Overview</button>
+        <button type="button" data-dashboard-tab="vehicles">Vehicles</button>
+        <button type="button" data-dashboard-tab="violations">Violations</button>
+        <button type="button" data-dashboard-tab="payments">Payments</button>
+        <button type="button" data-dashboard-tab="documents">Documents</button>
+        <button type="button" data-dashboard-tab="alerts">Alerts</button>
+        <button type="button" data-dashboard-tab="settings">Settings</button>
+      </nav>
+      <div class="customer-sidebar-bottom">
+        <button type="button" data-dashboard-tab="help">Help</button>
+        <a href="./index.html">Log out</a>
+      </div>
+    </aside>
+
+    <main class="customer-main">
+      <div class="customer-dashboard-card">
+        <header class="customer-header">
+          <div>
+            <p class="section-kicker">Customer Dashboard</p>
+            <h1 data-dashboard-title>Overview</h1>
+          </div>
+          <div class="customer-account-pill">demo@platora.net</div>
+        </header>
+
+        <section class="customer-view active" data-dashboard-view="overview">
+          <section class="customer-metrics" aria-label="Customer overview metrics">
+            <article><span>Open Items</span><strong>7</strong><button type="button" data-dashboard-tab="violations">View all</button></article>
+            <article><span>Amount Due</span><strong>$1,287.50</strong><button type="button" data-dashboard-tab="payments">View all</button></article>
+            <article><span>Potential Savings</span><strong>$643.00</strong><button type="button" data-dashboard-tab="alerts">View all</button></article>
+            <article><span>AutoPay Status</span><strong class="active-text">Active</strong><button type="button" data-dashboard-tab="settings">Manage</button></article>
+          </section>
+
+          <section class="customer-workspace">
+            <section class="customer-panel customer-activity-panel">
+              <div class="customer-panel-head">
+                <div>
+                  <p class="section-kicker">Recent Activity</p>
+                  <h2>Tickets, tolls, violations, and notices.</h2>
+                </div>
+                <button type="button" data-dashboard-tab="vehicles">Add Vehicle</button>
+              </div>
+              <div class="customer-data-table">
+                <div class="customer-data-row labels">
+                  <span>Type</span><span>Plate</span><span>State</span><span>Date</span><span>Amount</span><span>Status</span><span></span>
+                </div>
+                <div class="customer-data-row">
+                  <span>Speeding Violation</span><span>ABC1234</span><span>CA</span><span>May 10, 2026</span><span>$150.00</span><span><b class="due">Due</b></span><button>Pay</button>
+                </div>
+                <div class="customer-data-row">
+                  <span>Toll - I-90 East</span><span>ABC1234</span><span>NY</span><span>May 8, 2026</span><span>$4.25</span><span><b class="due">Due</b></span><button>Pay</button>
+                </div>
+                <div class="customer-data-row">
+                  <span>Meter Expired</span><span>XYZ9876</span><span>NY</span><span>May 5, 2026</span><span>$76.50</span><span><b class="due">Due</b></span><button>Pay</button>
+                </div>
+                <div class="customer-data-row">
+                  <span>Registration Notice</span><span>ABC1234</span><span>CA</span><span>Apr 30, 2026</span><span>-</span><span><b class="action">Action Needed</b></span><button>View</button>
+                </div>
+                <div class="customer-data-row">
+                  <span>Suspension Warning</span><span>LMN4321</span><span>FL</span><span>Apr 28, 2026</span><span>-</span><span><b class="urgent">Urgent</b></span><button>View</button>
+                </div>
+              </div>
+              <button class="customer-view-all" type="button" data-dashboard-tab="violations">View All Activity</button>
+            </section>
+
+            <aside class="customer-side-panels">
+              <section class="customer-panel compact-panel">
+                <p class="section-kicker">Vehicles</p>
+                <h2>Vehicle List</h2>
+                <div class="customer-vehicle-grid">
+                  <article><strong>ABC1234</strong><span>CA</span><b>3 items</b></article>
+                  <article><strong>XYZ9876</strong><span>NY</span><b>2 items</b></article>
+                  <article><strong>LMN4321</strong><span>FL</span><b>2 items</b></article>
+                </div>
+              </section>
+
+              <section class="customer-panel compact-panel">
+                <p class="section-kicker">Payments</p>
+                <h2>Payment Status</h2>
+                <div class="customer-list">
+                  <span><b>$150.00</b> Speeding Violation - Due</span>
+                  <span><b>$4.25</b> Toll - AutoPay eligible</span>
+                </div>
+              </section>
+
+              <section class="customer-panel compact-panel">
+                <p class="section-kicker">Documents</p>
+                <h2>Stored Proof</h2>
+                <div class="customer-list">
+                  <span>Registration notice.pdf</span>
+                  <span>I-90 toll receipt.pdf</span>
+                </div>
+              </section>
+
+              <section class="customer-panel compact-panel">
+                <p class="section-kicker">Alerts</p>
+                <h2>Vehicle Alerts</h2>
+                <div class="customer-list">
+                  <span><b>Urgent</b> Suspension warning</span>
+                  <span><b>Due Soon</b> Registration notice</span>
+                </div>
+              </section>
+
+              <section class="customer-panel compact-panel">
+                <p class="section-kicker">Settings</p>
+                <h2>Account Controls</h2>
+                <div class="customer-settings">
+                  <label><input type="checkbox" checked /> AutoPay tolls under $100</label>
+                  <label><input type="checkbox" checked /> Email urgent alerts</label>
+                </div>
+              </section>
+
+              <section class="customer-panel compact-panel">
+                <p class="section-kicker">Help</p>
+                <h2>Support</h2>
+                <p class="customer-help-copy">Coverage, payment proof, and AutoPay support.</p>
+              </section>
+            </aside>
+          </section>
+        </section>
+
+        <section class="customer-view" data-dashboard-view="vehicles">
+          <section class="customer-panel">
+            <div class="customer-panel-head">
+              <div>
+                <p class="section-kicker">Vehicles</p>
+                <h2>Vehicle List</h2>
+              </div>
+              <button type="button">Add Vehicle</button>
+            </div>
+            <div class="customer-vehicle-grid expanded">
+              <article><strong>ABC1234</strong><span>California</span><b>3 open items</b></article>
+              <article><strong>XYZ9876</strong><span>New York</span><b>2 open items</b></article>
+              <article><strong>LMN4321</strong><span>Florida</span><b>2 open items</b></article>
+            </div>
+          </section>
+        </section>
+
+        <section class="customer-view" data-dashboard-view="violations">
+          <section class="customer-panel customer-activity-panel">
+            <div class="customer-panel-head">
+              <div>
+                <p class="section-kicker">Violations</p>
+                <h2>Tickets, tolls, and violations.</h2>
+              </div>
+            </div>
+            <div class="customer-data-table">
+              <div class="customer-data-row labels">
+                <span>Type</span><span>Plate</span><span>State</span><span>Date</span><span>Amount</span><span>Status</span><span></span>
+              </div>
+              <div class="customer-data-row">
+                <span>Speeding Violation</span><span>ABC1234</span><span>CA</span><span>May 10, 2026</span><span>$150.00</span><span><b class="due">Due</b></span><button>Pay</button>
+              </div>
+              <div class="customer-data-row">
+                <span>Toll - I-90 East</span><span>ABC1234</span><span>NY</span><span>May 8, 2026</span><span>$4.25</span><span><b class="due">Due</b></span><button>Pay</button>
+              </div>
+              <div class="customer-data-row">
+                <span>Meter Expired</span><span>XYZ9876</span><span>NY</span><span>May 5, 2026</span><span>$76.50</span><span><b class="due">Due</b></span><button>Pay</button>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="customer-view" data-dashboard-view="payments">
+          <section class="customer-panel">
+            <p class="section-kicker">Payments</p>
+            <h2>Payment Status</h2>
+            <div class="customer-list expanded">
+              <span><b>$150.00</b> Speeding Violation - Due</span>
+              <span><b>$4.25</b> Toll - AutoPay eligible</span>
+              <span><b>$76.50</b> Meter Expired - Manual review</span>
+              <span><b>$0.00</b> Registration Notice - Action needed before payment</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="customer-view" data-dashboard-view="documents">
+          <section class="customer-panel">
+            <p class="section-kicker">Documents</p>
+            <h2>Stored proof, registrations, receipts, and saved notices.</h2>
+            <div class="customer-list expanded">
+              <span>ABC1234 registration notice.pdf</span>
+              <span>I-90 toll receipt.pdf</span>
+              <span>California payment proof.pdf</span>
+              <span>Suspension warning scan.pdf</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="customer-view" data-dashboard-view="alerts">
+          <section class="customer-panel">
+            <p class="section-kicker">Alerts</p>
+            <h2>Urgent warnings, due soon notices, and flagged items.</h2>
+            <div class="customer-list expanded">
+              <span><b>Urgent</b> Suspension warning needs review</span>
+              <span><b>Due Soon</b> Registration notice pending</span>
+              <span><b>Flagged</b> New issuing authority requires approval</span>
+              <span><b>Info</b> AutoPay completed toll verification</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="customer-view" data-dashboard-view="settings">
+          <section class="customer-panel">
+            <p class="section-kicker">Settings</p>
+            <h2>Account settings and AutoPay rules.</h2>
+            <div class="customer-settings expanded">
+              <label><input type="checkbox" checked /> AutoPay tolls under $100</label>
+              <label><input type="checkbox" /> Require approval over $500</label>
+              <label><input type="checkbox" checked /> Email urgent alerts</label>
+              <label><input type="checkbox" checked /> Store payment receipts automatically</label>
+            </div>
+            <div class="customer-profile-grid">
+              <span><b>Profile email</b> demo@platora.net</span>
+              <span><b>Password reset</b> Send reset link</span>
+              <span><b>Notifications</b> Email and dashboard alerts</span>
+              <span><b>Account controls</b> Manage vehicles and AutoPay</span>
+            </div>
+          </section>
+        </section>
+
+        <section class="customer-view" data-dashboard-view="help">
+          <section class="customer-panel">
+            <p class="section-kicker">Help</p>
+            <h2>Support and guidance.</h2>
+            <p class="customer-help-copy">
+              Platora support can help with coverage, payment proof, registration notices,
+              saved documents, alerts, and AutoPay rules.
+            </p>
+          </section>
+        </section>
+      </div>
+    </main>
+    <script src="./customer.js"></script>
+  </body>
+</html>
